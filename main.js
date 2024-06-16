@@ -156,7 +156,7 @@ gsap.to(cover, {
     // Additional animation for expanding image
     cover_copy.animate(
       {
-        top: "90vh", //fix bug when top is limited to track height
+        top: "90dvh", //fix bug when top is limited to track height
       },
       {
         duration: 1200, // Animation duration in milliseconds

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" href="./style.css" />
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/themes/odometer-theme-minimal.css"
+    integrity="sha512-82n59AgQXo3NhYHeauDYw9TE2zGh9yOdXN9wbiDZA+uaf0xOkSYxGNLzKMMngZQjBTw94EujhfEfKkYybQqfOQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <!-- NAV BAR -->
+  <div class="nav-wrapper">
+    <div class="nav-bar">
+      <div class="work"><a>Work</a></div>
+      <div class="about"><a>About</a></div>
+    </div>
+  </div>
+
+  <!-- Container for the Cross at the center of the screen / currently invisible -->
+  <div class="x-container">
+    <div class="x">
+      <svg viewBox="0 0 22 22">
+        <polygon class="st0" points="22 11.751 0 11.751 0 10.249 22 10.249 22 11"></polygon>
+        <polygon class="st0" points="11.751 0 11.751 22 10.249 22 10.249 0 11 0"></polygon>
+      </svg>
+    </div>
+    <!-- It's fixed and centered across the screen, so may as well use it for appearing texxt for each image inside image track -->
+    <div class="text_appear_container">
+      <div class="text_appear"></div>
+    </div>
+  </div>
+
+  <!-- Container for the odometr at the bottom of the screen(shows current page) -->
+  <div class="number-container">
+    <h1 class="number odometer number1" draggable="false">0</h1>
+    <h1 class="number number2" draggable="false">⎯⎯ 8</h1>
+  </div>
+  <!-- Containers for both left and right crosses at the corresponding parts of the screen / appears only after certain image is clicked -->
+  <div class="crosses-container cross-container1">
+    <div class="left_cross cross">
+      <svg width="22" height="22">
+        <!-- Horizontal Lines -->
+        <line id="x1" x1="11" y1="11" x2="11" y2="11" style="stroke: white; stroke-width: 1.5625">
+          <animate attributeName="x2" begin="indefinite" from="11" to="0" dur="0.75s" class="linesAnimation" />
+          <animate attributeName="x2" begin="indefinite" from="0" to="11" dur="0.75s" class="linesAnimationReverse" />
+        </line>
+        <line id="x2" x1="11" y1="11" x2="11" y2="11" style="stroke: white; stroke-width: 1.5625">
+          <animate attributeName="x2" begin="indefinite" from="11" to="22" dur="0.75s" class="linesAnimation" />
+          <animate attributeName="x2" begin="indefinite" from="22" to="11" dur="0.75s" class="linesAnimationReverse" />
+        </line>
+
+        <!-- Vertical Lines -->
+        <line id="y1" x1="11" y1="11" x2="11" y2="11" style="stroke: white; stroke-width: 1.5625">
+          <animate attributeName="y2" begin="indefinite" from="11" to="0" dur="0.75s" class="linesAnimation" />
+          <animate attributeName="y2" begin="indefinite" from="0" to="11" dur="0.75s" class="linesAnimationReverse" />
+        </line>
+        <line id="y2" x1="11" y1="11" x2="11" y2="11" style="stroke: white; stroke-width: 1.5625">
+          <animate attributeName="y2" begin="indefinite" from="11" to="22" dur="0.75s" class="linesAnimation" />
+          <animate attributeName="y2" begin="indefinite" from="22" to="11" dur="0.75s" class="linesAnimationReverse" />
+        </line>
+      </svg>
+    </div>
+  </div>
+
+
+  <div class="crosses-container cross-container2">
+    <div class="right_cross cross">
+      <svg width="22" height="22">
+        <!-- Horizontal Lines -->
+        <line id="x1" x1="11" y1="11" x2="11" y2="11" style="stroke: white; stroke-width: 1.5625">
+          <animate attributeName="x2" begin="indefinite" from="11" to="0" dur="0.75s" class="linesAnimation" />
+          <animate attributeName="x2" begin="indefinite" from="0" to="11" dur="0.75s" class="linesAnimationReverse" />
+        </line>
+        <line id="x2" x1="11" y1="11" x2="11" y2="11" style="stroke: white; stroke-width: 1.5625">
+          <animate attributeName="x2" begin="indefinite" from="11" to="22" dur="0.75s" class="linesAnimation" />
+          <animate attributeName="x2" begin="indefinite" from="22" to="11" dur="0.75s" class="linesAnimationReverse" />
+        </line>
+
+        <!-- Vertical Lines -->
+        <line id="y1" x1="11" y1="11" x2="11" y2="11" style="stroke: white; stroke-width: 1.5625">
+          <animate attributeName="y2" begin="indefinite" from="11" to="0" dur="0.75s" class="linesAnimation" />
+          <animate attributeName="y2" begin="indefinite" from="0" to="11" dur="0.75s" class="linesAnimationReverse" />
+        </line>
+        <line id="y2" x1="11" y1="11" x2="11" y2="11" style="stroke: white; stroke-width: 1.5625">
+          <animate attributeName="y2" begin="indefinite" from="11" to="22" dur="0.75s" class="linesAnimation" />
+          <animate attributeName="y2" begin="indefinite" from="22" to="11" dur="0.75s" class="linesAnimationReverse" />
+        </line>
+      </svg>
+    </div>
+  </div>
+
+
+
+
+  <div class="container">
+    <div class="col c-1">
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8amFwYW58ZW58MHx8MHx8fDA%3D"
+          draggable="false" />
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1610194352361-4c81a6a8967e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
+          draggable="false" />
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1618202133208-2907bebba9e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          draggable="false" />
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGphcGFufGVufDB8fDB8fHww"
+          draggable="false" />
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1548021682-1720ed403a5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          draggable="false" />
+      </div>
+    </div>
+
+
+    <div class="col c-2">
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          draggable="false" />
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGphcGFufGVufDB8fDB8fHww"
+          draggable="false" />
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGphcGFufGVufDB8fDB8fHww"
+          draggable="false" />
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8amFwYW58ZW58MHx8MHx8fDA%3D"
+          draggable="false" />
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1548021682-1720ed403a5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          draggable="false" />
+      </div>
+    </div>
+
+
+    <div class="col c-3">
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          draggable="false" />
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8amFwYW58ZW58MHx8MHx8fDA%3D"
+          draggable="false" />
+      </div>
+      <div class="item main_img">
+        <img
+          src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          draggable="false" />
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1495805442109-bf1cf975750b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          draggable="false" />
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1548021682-1720ed403a5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          draggable="false" />
+      </div>
+    </div>
+
+
+
+    <div class="col c-4">
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          draggable="false" />
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8amFwYW58ZW58MHx8MHx8fDA%3D"
+          draggable="false" />
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1618202133208-2907bebba9e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          draggable="false" />
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1495805442109-bf1cf975750b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          draggable="false" />
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8amFwYW58ZW58MHx8MHx8fDA%3D"
+          draggable="false" />
+      </div>
+    </div>
+
+    <div class="col c-5">
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1548021682-1720ed403a5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          draggable="false" />
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8amFwYW58ZW58MHx8MHx8fDA%3D"
+          draggable="false" />
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1717947499189-6c84fec5055c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5Mnx8fGVufDB8fHx8fA%3D%3D"
+          draggable="false" />
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1718197493441-7e51e04476f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0Mnx8fGVufDB8fHx8fA%3D%3D"
+          draggable="false" />
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1718115257239-7246f434a7b0?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          draggable="false" />
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Container blocks after image is clicked, to change current images -->
+  <div class="prev_img img_selector"></div>
+  <div class="next_img img_selector"></div>
+
+  <!-- Main image track, each div of class image has image, and hidden cover, that overlay's original image when clicked, and unique text that should appear after the click -->
+  <div class="wrapper">
+    <div class="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+      <div class="image">
+        <img
+          src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          draggable="false" data-image-id="1" alt="" & onerror="this.style.display='none'" />
+        <div class="cover" data-cover-id="1">
+          <h1>The Regeneration Suite</h1>
+        </div>
+      </div>
+
+      <div class="image">
+        <img
+          src="https://images.unsplash.com/photo-1610194352361-4c81a6a8967e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
+          draggable="false" data-image-id="2" alt="" & onerror="this.style.display='none'" />
+        <div class="cover" data-cover-id="2">
+          <h1>The AI Project</h1>
+        </div>
+      </div>
+
+      <div class="image">
+        <img
+          src="https://images.unsplash.com/photo-1618202133208-2907bebba9e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          draggable="false" data-image-id="3" alt="" & onerror="this.style.display='none'" />
+        <div class="cover" data-cover-id="3">
+          <h1>The Regeneration Suite 1</h1>
+        </div>
+      </div>
+
+      <div class="image">
+        <img
+          src="https://images.unsplash.com/photo-1495805442109-bf1cf975750b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          draggable="false" data-image-id="4" alt="" & onerror="this.style.display='none'" />
+        <div class="cover" data-cover-id="4">
+          <h1>The Regeneration Suite 2</h1>
+        </div>
+      </div>
+
+      <div class="image">
+        <img
+          src="https://images.unsplash.com/photo-1548021682-1720ed403a5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          draggable="false" data-image-id="5" alt="" & onerror="this.style.display='none'" />
+        <div class="cover" data-cover-id="5">
+          <h1>The Regeneration Suite 3</h1>
+        </div>
+      </div>
+
+      <div class="image">
+        <img
+          src="https://images.unsplash.com/photo-1496753480864-3e588e0269b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2134&q=80"
+          draggable="false" data-image-id="6" alt="" & onerror="this.style.display='none'" />
+        <div class="cover" data-cover-id="6">
+          <h1>The Regeneration Suite 4</h1>
+        </div>
+      </div>
+
+      <div class="image">
+        <img
+          src="https://images.unsplash.com/photo-1613346945084-35cccc812dd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1759&q=80"
+          draggable="false" data-image-id="7" alt="" & onerror="this.style.display='none'" />
+        <div class="cover" data-cover-id="7">
+          <h1>The Regeneration Suite 5</h1>
+        </div>
+      </div>
+
+      <div class="image">
+        <img
+          src="https://images.unsplash.com/photo-1516681100942-77d8e7f9dd97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          draggable="false" data-image-id="8" alt="" & onerror="this.style.display='none'" />
+        <div class="cover" data-cover-id="8">
+          <h1>The Regeneration Suite 6</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Elements of slider -->
+  <div class="slider">
+    <div class="slider_image" data-id="1"></div>
+    <div class="slider_image" data-id="2"></div>
+    <div class="slider_image" data-id="3"></div>
+    <div class="slider_image" data-id="4"></div>
+    <div class="slider_image" data-id="5"></div>
+    <div class="slider_image" data-id="6"></div>
+    <div class="slider_image" data-id="7"></div>
+    <div class="slider_image" data-id="8"></div>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script> -->
+
+  <!-- Js animation source for odometer -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"
+    integrity="sha512-51WDTV7haD9BBDc8RWH2r5TnuSiRyAqEnbGyuKHYn+qpYCrCckxFeqlr1I5UoOULijyLV2vnHO9LS4MrAzHxwQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Main script -->
+  <script src="main.js"></script>
+</body>

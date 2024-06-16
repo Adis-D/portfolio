@@ -173,7 +173,7 @@ gsap.to(cover, {
 
       // set styles for copy
       cover.style.left = `calc(${-track.dataset.percentage}% + ${65 + parseInt(cover.dataset.coverId) * 3.7}vw)`;
-      cover.style.top = "120vh";
+      cover.style.top = "120dvh";
       cover.style.width =  "3.5vw";
       cover.style.height = "4vh";
       cover.style.backgroundImage = `url(${otherImage.src})`;
@@ -187,7 +187,7 @@ gsap.to(cover, {
       // Animate images
       cover.animate(
         {
-          top: "90vh",
+          top: "90dvh",
         },
         {
           duration: 1200,

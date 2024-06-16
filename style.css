@@ -307,3 +307,40 @@ body {
     height: 8vh;
   }
 }
+
+
+
+
+
+
+
+.vh{
+  border: 3px solid white;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+}
+
+.dvh{
+  border: 3px solid green;
+  height: 100dvh;
+  width: 100vw;
+  position: absolute;
+}
+
+
+.svh{
+  height: 100svh;
+  border: 3px solid red;
+  width: 100vw;
+  position: absolute;
+}
+
+.dimensions {
+  font-size: 16px;
+  color: red;
+  position: absolute;
+  width: 10vh;
+  height: 10vh;
+  z-index: 100000;
+  }

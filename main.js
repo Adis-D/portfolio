@@ -438,7 +438,7 @@ if (isNaN(Number(track.dataset.percentage))) {
     // Additional animation for expanding image
     cover_copy.animate(
       {
-        top: "70svh", //fix bug when top is limited to track height
+        top: "70dvh", //fix bug when top is limited to track height
       },
       {
         duration: 1000, // Animation duration in milliseconds
@@ -479,7 +479,7 @@ if (isNaN(Number(track.dataset.percentage))) {
         // Animate images
         cover.animate(
           {
-            top: "70svh",
+            top: "70dvh",
             height: "4vh",
             width: "3.5vw",
             left:`calc(${-track.dataset.percentage}% + ${65 + parseInt(cover.dataset.coverId) * 3.7}vw)`,
@@ -870,7 +870,7 @@ const animation_imgs_out = (imgs) => {
       // Animate cover element's going back to their positions
       cover.animate(
         {
-          top: [`70svh`, otherImage.offsetTop + "px"],
+          top: [`70dvh`, otherImage.offsetTop + "px"],
           left: [
             `calc(${-track.dataset.percentage}% + ${65 + parseInt(cover.dataset.coverId) * 3.7}vw)`,
             otherImage.offsetLeft + "px",
@@ -905,7 +905,7 @@ const animation_imgs_out_diff_img = (imgs) => {
 
   cover.animate(
     {
-      top: [`70svh`, window.currImage.offsetTop + "px"],
+      top: [`70dvh`, window.currImage.offsetTop + "px"],
       left: [
          `calc(${-track.dataset.percentage}% + ${65 + parseInt(cover.dataset.coverId) * 3.7}vw)`,
         window.currImage.offsetLeft + "px",
@@ -937,7 +937,7 @@ const animation_imgs_out_diff_img = (imgs) => {
       // Animate cover element's going back to their positions
       cover.animate(
         {
-          top: [`70svh`, otherImage.offsetTop + "px"],
+          top: [`70dvh`, otherImage.offsetTop + "px"],
           left: [
             `calc(${-track.dataset.percentage}% + ${65 + parseInt(cover.dataset.coverId) * 3.7}vw)`,
             otherImage.offsetLeft + "px",

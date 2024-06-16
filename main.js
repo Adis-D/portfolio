@@ -118,7 +118,7 @@ container.style.display = 'none'
 
 gsap.to(cover, {
   width: "100vw",
-  height: "100svh",
+  height: "100dvh",
   left: "0px",
   top: "0px",
   duration: 2,
@@ -147,9 +147,9 @@ gsap.to(cover, {
       cover_copy.classList.add("cover_copy");
       imgs[0].parentElement.appendChild(cover_copy);
       cover_copy.style.width = "3.5vw"; 
-      cover_copy.style.height = "4svh";
+      cover_copy.style.height = "4dvh";
       cover_copy.style.left = `calc(${-track.dataset.percentage}% + ${65 + parseInt(cover_copy.dataset.coverId) * 3.7}vw)`;
-      cover_copy.style.top = "120svh";
+      cover_copy.style.top = "120dvh";
       cover_copy.style.display = "block";
       cover_copy.style.position = 'fixed'
       window.currCoverCopy = cover_copy
@@ -157,7 +157,7 @@ gsap.to(cover, {
     // Additional animation for expanding image
     cover_copy.animate(
       {
-        top: "90svh", //fix bug when top is limited to track height
+        top: "90dvh", //fix bug when top is limited to track height
       },
       {
         duration: 1200, // Animation duration in milliseconds
@@ -174,9 +174,9 @@ gsap.to(cover, {
 
       // set styles for copy
       cover.style.left = `calc(${-track.dataset.percentage}% + ${65 + parseInt(cover.dataset.coverId) * 3.7}vw)`;
-      cover.style.top = "120svh";
+      cover.style.top = "120dvh";
       cover.style.width =  "3.5vw";
-      cover.style.height = "4svh";
+      cover.style.height = "4dvh";
       cover.style.backgroundImage = `url(${otherImage.src})`;
       cover.style.zIndex = "11";
 
@@ -188,7 +188,7 @@ gsap.to(cover, {
       // Animate images
       cover.animate(
         {
-          top: "90svh",
+          top: "90dvh",
         },
         {
           duration: 1200,
@@ -408,9 +408,9 @@ if (isNaN(Number(track.dataset.percentage))) {
     cover_copy.classList.add("cover_copy");
     image.parentElement.appendChild(cover_copy);
     cover_copy.style.width = "3.5vw"; 
-    cover_copy.style.height = "4svh";
+    cover_copy.style.height = "4dvh";
     cover_copy.style.left = `calc(${-track.dataset.percentage}% + ${65 + parseInt(cover_copy.dataset.coverId) * 3.7}vw)`;
-    cover_copy.style.top = "100svh";
+    cover_copy.style.top = "100dvh";
     cover_copy.style.display = "block";
     cover_copy.style.position = 'fixed'
 
@@ -423,7 +423,7 @@ if (isNaN(Number(track.dataset.percentage))) {
     cover.animate(
       {
         width: [cover.style.width, "100vw"],
-        height: [cover.style.height, "100svh"],
+        height: [cover.style.height, "100dvh"],
         left: `${-track.dataset.percentage}%`, // fill left side of the page
         top: `-${track.getBoundingClientRect().top}` + "px", //fix bug when top is limited to track height
         backgroundPosition: 'center center'
@@ -439,7 +439,7 @@ if (isNaN(Number(track.dataset.percentage))) {
     // Additional animation for expanding image
     cover_copy.animate(
       {
-        top: "70svh", //fix bug when top is limited to track height
+        top: "70dvh", //fix bug when top is limited to track height
       },
       {
         duration: 1000, // Animation duration in milliseconds
@@ -480,8 +480,8 @@ if (isNaN(Number(track.dataset.percentage))) {
         // Animate images
         cover.animate(
           {
-            top: "70svh",
-            height: "4svh",
+            top: "70dvh",
+            height: "4dvh",
             width: "3.5vw",
             left:`calc(${-track.dataset.percentage}% + ${65 + parseInt(cover.dataset.coverId) * 3.7}vw)`,
           },
@@ -517,12 +517,12 @@ if (isNaN(Number(track.dataset.percentage))) {
 //Animate slider when preview elements are clicked
 function change_slide_clicked_cover(coverId) {
   if (coverId > window.currSliderImg) {
-    slider[coverId].animate({left:['100vw', '0vw'], width: ['0vw','100vw'], height:['100svh', '100svh']},{duration:600, fill:'forwards', easing:'ease-out'}) // next image
-    slider[window.currSliderImg].animate({right:['0vw', '100vw'], width:['100vw', '0vw'], height:['100svh', '100svh']},{duration:800, fill:'forwards', easing:'ease-out'}) // current image
+    slider[coverId].animate({left:['100vw', '0vw'], width: ['0vw','100vw'], height:['100dvh', '100dvh']},{duration:600, fill:'forwards', easing:'ease-out'}) // next image
+    slider[window.currSliderImg].animate({right:['0vw', '100vw'], width:['100vw', '0vw'], height:['100dvh', '100dvh']},{duration:800, fill:'forwards', easing:'ease-out'}) // current image
 
 
     for (i=window.currSliderImg+1; i<coverId; i++) {
-      slider[i].animate({left:['100vw', '0vw'], width:['100vw', '0vw'], height:['100svh', '100svh']},{duration:0.1, fill:'forwards', easing:'ease-out'}) 
+      slider[i].animate({left:['100vw', '0vw'], width:['100vw', '0vw'], height:['100dvh', '100dvh']},{duration:0.1, fill:'forwards', easing:'ease-out'}) 
     }
 
     // Actions linked to current image shown
@@ -546,8 +546,8 @@ function change_slide_clicked_cover(coverId) {
     }, 80);
   }
   else if (coverId < window.currSliderImg) {
-    slider[coverId].animate({left:'0vw', width:['0vw','100vw'], height:['100svh', '100svh']},{duration:600, fill:'forwards', easing:'ease-out'}) // previous image
-    slider[window.currSliderImg].animate({left:['0vw','100vw'], width:['100vw', '0vw'], height:['100svh', '100svh']},{duration:600, fill:'forwards', easing:'ease-out'}) // current image
+    slider[coverId].animate({left:'0vw', width:['0vw','100vw'], height:['100dvh', '100dvh']},{duration:600, fill:'forwards', easing:'ease-out'}) // previous image
+    slider[window.currSliderImg].animate({left:['0vw','100vw'], width:['100vw', '0vw'], height:['100dvh', '100dvh']},{duration:600, fill:'forwards', easing:'ease-out'}) // current image
 
 
     // Actions linked to current image shown
@@ -720,11 +720,11 @@ const animate_slider = (imgs) => {
     }
     slider.forEach(slide => {
       slide.style.width = '0vw'
-      slide.style.height = '0svh'
+      slide.style.height = '0dvh'
       slide.style.left = '0px'
     })
 
-    slider[window.currSliderImg].animate({left:'0px', width:['100vw', '100vw'], height:'100svh'},{duration: 1, fill:'forwards'})
+    slider[window.currSliderImg].animate({left:'0px', width:['100vw', '100vw'], height:'100dvh'},{duration: 1, fill:'forwards'})
     window.currCover.style.visibility = "hidden";
   },anim_dur_cover_expand)
 }
@@ -739,8 +739,8 @@ img_selector[1].addEventListener('click', (e)=>{slider_main(e)})
 const slider_main = (e) => {
   if (e.target.classList[0] == 'next_img' &&  window.currSliderImg<7) {
 
-    slider[window.currSliderImg+1].animate({left:['100vw', '0vw'], width: ['0vw','100vw'], height:['100svh', '100svh']},{duration:600, fill:'forwards', easing:'ease-out'}) // next image
-    slider[window.currSliderImg].animate({right:['0vw', '100vw'], width:['100vw', '0vw'], height:['100svh', '100svh']},{duration:800, fill:'forwards', easing:'ease-out'}) // current image
+    slider[window.currSliderImg+1].animate({left:['100vw', '0vw'], width: ['0vw','100vw'], height:['100dvh', '100dvh']},{duration:600, fill:'forwards', easing:'ease-out'}) // next image
+    slider[window.currSliderImg].animate({right:['0vw', '100vw'], width:['100vw', '0vw'], height:['100dvh', '100dvh']},{duration:800, fill:'forwards', easing:'ease-out'}) // current image
 
     // Actions linked to current image shown
     crossAnimateRotate()
@@ -765,8 +765,8 @@ const slider_main = (e) => {
 
 
   else if (e.target.classList[0] == 'prev_img' &&  window.currSliderImg>0) {
-    slider[window.currSliderImg-1].animate({left:'0vw', width:['0vw','100vw'], height:['100svh', '100svh']},{duration:600, fill:'forwards', easing:'ease-out'}) // previous image
-    slider[window.currSliderImg].animate({left:['0vw','100vw'], width:['100vw', '0vw'], height:['100svh', '100svh']},{duration:600, fill:'forwards', easing:'ease-out'}) // current image
+    slider[window.currSliderImg-1].animate({left:'0vw', width:['0vw','100vw'], height:['100dvh', '100dvh']},{duration:600, fill:'forwards', easing:'ease-out'}) // previous image
+    slider[window.currSliderImg].animate({left:['0vw','100vw'], width:['100vw', '0vw'], height:['100dvh', '100dvh']},{duration:600, fill:'forwards', easing:'ease-out'}) // current image
 
 
     // Actions linked to current image shown
@@ -807,7 +807,7 @@ const animation_expanded_out = () => {
   const image_positon = currImage.getBoundingClientRect();
 
  
-  slider[window.currSliderImg].animate({width:'0vw', height:'100svh', left: '0px'},{duration:1, fill:'forwards'})
+  slider[window.currSliderImg].animate({width:'0vw', height:'100dvh', left: '0px'},{duration:1, fill:'forwards'})
   cover.style.backgroundImage = `url(${currImage.src})`;
   cover.style.visibility = "visible";
 
@@ -815,7 +815,7 @@ const animation_expanded_out = () => {
   cover.animate(
     {
       width: ["100vw", image_positon.width + "px"],
-      height: ["100svh", image_positon.height + "px"],
+      height: ["100dvh", image_positon.height + "px"],
       left: [`${-track.dataset.percentage}%`, currImage.offsetLeft + "px"],
       top: [
         `0px`,
@@ -843,7 +843,7 @@ const animation_expanded_out = () => {
     window.currCoverCopy.style.backgroundImage = `url(${imgs[window.currSliderImg].src})`
   }
   window.currCoverCopy.animate(
-    { marginTop: "100svh" },
+    { marginTop: "100dvh" },
     { duration: 2500}
   );
   setTimeout(() => {
@@ -871,7 +871,7 @@ const animation_imgs_out = (imgs) => {
       // Animate cover element's going back to their positions
       cover.animate(
         {
-          top: [`70svh`, otherImage.offsetTop + "px"],
+          top: [`70dvh`, otherImage.offsetTop + "px"],
           left: [
             `calc(${-track.dataset.percentage}% + ${65 + parseInt(cover.dataset.coverId) * 3.7}vw)`,
             otherImage.offsetLeft + "px",
@@ -906,7 +906,7 @@ const animation_imgs_out_diff_img = (imgs) => {
 
   cover.animate(
     {
-      top: [`70svh`, window.currImage.offsetTop + "px"],
+      top: [`70dvh`, window.currImage.offsetTop + "px"],
       left: [
          `calc(${-track.dataset.percentage}% + ${65 + parseInt(cover.dataset.coverId) * 3.7}vw)`,
         window.currImage.offsetLeft + "px",
@@ -938,7 +938,7 @@ const animation_imgs_out_diff_img = (imgs) => {
       // Animate cover element's going back to their positions
       cover.animate(
         {
-          top: [`70svh`, otherImage.offsetTop + "px"],
+          top: [`70dvh`, otherImage.offsetTop + "px"],
           left: [
             `calc(${-track.dataset.percentage}% + ${65 + parseInt(cover.dataset.coverId) * 3.7}vw)`,
             otherImage.offsetLeft + "px",

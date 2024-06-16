@@ -318,14 +318,14 @@ body {
   border: 3px solid white;
   height: 100vh;
   width: 100vw;
-  position: absolute;
+  position: fixed;
 }
 
 .dvh{
   border: 3px solid green;
   height: 100dvh;
   width: 100vw;
-  position: absolute;
+  position: fixed;
 }
 
 
@@ -333,13 +333,13 @@ body {
   height: 100svh;
   border: 3px solid red;
   width: 100vw;
-  position: absolute;
+  position: fixed;
 }
 
 .dimensions {
   font-size: 16px;
   color: red;
-  position: absolute;
+  position: fixed;
   width: 10vh;
   height: 10vh;
   z-index: 100000;

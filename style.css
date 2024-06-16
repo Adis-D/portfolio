@@ -12,7 +12,7 @@ body {
   position: fixed;
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   gap: 1em;
   /* display: none; */
 }
@@ -62,7 +62,7 @@ body {
 
 
 .wrapper {
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -104,12 +104,12 @@ body {
 }
 
 .x-container {
-  margin-top: 49vh;
+  margin-top: 49dvh;
   margin-left: 50vw;
 }
 
 .number-container {
-  margin-top: 90vh;
+  margin-top: 90dvh;
   margin-left: 50vw;
 }
 
@@ -124,7 +124,7 @@ body {
   font-size: 40px;
   color: white;
   display: none;
-  height: 10vh;
+  height: 10dvh;
   overflow: hidden;
   user-select: none;
   z-index: -10000000;
@@ -150,7 +150,7 @@ body {
 
 .nav-wrapper {
   width: 100vw;
-  height: 10vh;
+  height: 10dvh;
   position: fixed;
   display: flex;
   align-items: center;
@@ -202,7 +202,7 @@ body {
 .crosses-container {
   position: fixed;
   display: block;
-  margin-top: 49vh;
+  margin-top: 49dvh;
   z-index: 100;
   display: flex;
   justify-content: center;
@@ -248,7 +248,7 @@ body {
 .img_selector {
   position: fixed;
   display: block;
-  height: 100vh;
+  height: 100dvh;
   display: none;
   z-index: 1;
   /* border: 3px solid red; */
@@ -270,7 +270,7 @@ body {
   display: block;
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   /* border: 3px solid red; */
   left: 0px;
   top:0px;
@@ -285,7 +285,7 @@ body {
   left: 0vw;
   top: 0px;
   width: 0vw;
-  height: 100vh !important;
+  height: 100dvh !important;
   background-size: cover;
   background-position: center center;
 
@@ -304,43 +304,6 @@ body {
 @media (max-width: 1700px) {
   .text_appear_container{
     font-size: 50px;
-    height: 8vh;
+    height: 8dvh;
   }
 }
-
-
-
-
-
-
-
-.vh{
-  border: 3px solid white;
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-}
-
-.dvh{
-  border: 3px solid green;
-  height: 100dvh;
-  width: 100vw;
-  position: fixed;
-}
-
-
-.svh{
-  height: 100svh;
-  border: 3px solid red;
-  width: 100vw;
-  position: fixed;
-}
-
-.dimensions {
-  font-size: 16px;
-  color: red;
-  position: fixed;
-  width: 10vh;
-  height: 10vh;
-  z-index: 100000;
-  }

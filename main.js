@@ -14,6 +14,15 @@ width = '40vmin'; // dimensions of images
 height = '56vmin';
 
 
+
+
+
+
+const navigationHeight = window.innerHeight - document.documentElement.clientHeight;
+
+// Calculate adjusted height for elements
+document.querySelector('.vh').style.height = `calc(100vh - ${navigationHeight}px)`;
+
 document.querySelector('.dimensions').innerHTML = `Width: ${window.innerWidth}, Height: ${window.innerHeight}`
 
 

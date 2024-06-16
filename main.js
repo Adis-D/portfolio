@@ -14,6 +14,11 @@ width = '40vmin'; // dimensions of images
 height = '56vmin';
 
 
+document.querySelector('.dimensions').innerHTML = `Width: ${window.innerWidth}, Height: ${window.innerHeight}`
+
+
+
+
 
 const container =  document.querySelector(".container")
 const items = container.querySelectorAll('.item')
@@ -156,7 +161,7 @@ gsap.to(cover, {
     // Additional animation for expanding image
     cover_copy.animate(
       {
-        top: "90dvh", //fix bug when top is limited to track height
+        top: "90vh", //fix bug when top is limited to track height
       },
       {
         duration: 1200, // Animation duration in milliseconds
@@ -173,7 +178,7 @@ gsap.to(cover, {
 
       // set styles for copy
       cover.style.left = `calc(${-track.dataset.percentage}% + ${65 + parseInt(cover.dataset.coverId) * 3.7}vw)`;
-      cover.style.top = "120dvh";
+      cover.style.top = "120vh";
       cover.style.width =  "3.5vw";
       cover.style.height = "4vh";
       cover.style.backgroundImage = `url(${otherImage.src})`;
@@ -187,7 +192,7 @@ gsap.to(cover, {
       // Animate images
       cover.animate(
         {
-          top: "90dvh",
+          top: "90vh",
         },
         {
           duration: 1200,
@@ -438,7 +443,7 @@ if (isNaN(Number(track.dataset.percentage))) {
     // Additional animation for expanding image
     cover_copy.animate(
       {
-        top: "70dvh", //fix bug when top is limited to track height
+        top: "70vh", //fix bug when top is limited to track height
       },
       {
         duration: 1000, // Animation duration in milliseconds
@@ -479,7 +484,7 @@ if (isNaN(Number(track.dataset.percentage))) {
         // Animate images
         cover.animate(
           {
-            top: "70dvh",
+            top: "70vh",
             height: "4vh",
             width: "3.5vw",
             left:`calc(${-track.dataset.percentage}% + ${65 + parseInt(cover.dataset.coverId) * 3.7}vw)`,
@@ -870,7 +875,7 @@ const animation_imgs_out = (imgs) => {
       // Animate cover element's going back to their positions
       cover.animate(
         {
-          top: [`70dvh`, otherImage.offsetTop + "px"],
+          top: [`70vh`, otherImage.offsetTop + "px"],
           left: [
             `calc(${-track.dataset.percentage}% + ${65 + parseInt(cover.dataset.coverId) * 3.7}vw)`,
             otherImage.offsetLeft + "px",
@@ -905,7 +910,7 @@ const animation_imgs_out_diff_img = (imgs) => {
 
   cover.animate(
     {
-      top: [`70dvh`, window.currImage.offsetTop + "px"],
+      top: [`70vh`, window.currImage.offsetTop + "px"],
       left: [
          `calc(${-track.dataset.percentage}% + ${65 + parseInt(cover.dataset.coverId) * 3.7}vw)`,
         window.currImage.offsetLeft + "px",
@@ -937,7 +942,7 @@ const animation_imgs_out_diff_img = (imgs) => {
       // Animate cover element's going back to their positions
       cover.animate(
         {
-          top: [`70dvh`, otherImage.offsetTop + "px"],
+          top: [`70vh`, otherImage.offsetTop + "px"],
           left: [
             `calc(${-track.dataset.percentage}% + ${65 + parseInt(cover.dataset.coverId) * 3.7}vw)`,
             otherImage.offsetLeft + "px",
